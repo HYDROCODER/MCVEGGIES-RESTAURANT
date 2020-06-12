@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McVeg Restaurant</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet"> 
+
+        <style>
+            html,body{
+                height: 100%;
+                
+            }
+            .quotebox{
+                height: 100%;
+                display: none;
+            }
+            
+            .quote{
+                background-color: blanchedalmond;
+                box-shadow: 5px 10px 10px  #696969;
+                text-align: center;
+                
+                
+                
+                }
+            .quote blockquote{
+                font-family: 'Merriweather', serif;
+            }
+        
+            
+            
+
+        </style>
+        
+</head>
+<body>
+   
+   
+   
+<div class="container d-flex h-100 " id="introone" >
+    <div class="row align-self-center w-100">
+        <div class="col-md-12 mx-auto">
+            <div class="container quotebox">
+                <div class="row h-100">
+                    <div class="col-md-12 my-auto quote">
+                     <blockquote class="blockquote"><p>If slaughterhouses had glass walls, the whole world would be vegetarian</p>
+                         <footer class="blockquote-footer">Linda McCartney</footer>
+                     </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron intro" style="background-color: rgba(255,255,255,0.9);">
+                
+                <div class="display-3 text-center" style="font-family: 'Roboto Slab', serif;">
+                    Welcome to McVeggies Restaurant!
+                </div>
+                <div class="display-3 text-center" style="font-family: 'Inknut Antiqua', serif;">
+                    आपका स्वागत है
+                </div>
+                <p class="lead text-center">
+                   <b> A veg foodie?No issue, you are at the right place..
+                    <br>Sniffing for some meat? Well, rest assured, we wouldn't say SAYONARA,
+                    <br> We will offer you a free meal and let's talk about your veg interests,shall we?..</b>
+                </p>
+                <p class="lead text-center" style="margin: 0em;">
+                    <b>You have been here before? Dig in : </b><br><button class="btn btn-primary" data-toggle="modal" data-target=".loginModal">Login here</button>
+                </p>
+                <p class="lead text-center" style="margin: 0em;">
+                   <b> New Here?No issues,you can register here for free :<br> 
+                     </b><button class="btn btn-info" data-toggle="modal" data-target=".registerModal">Register Here</button>
+                </p>
+                
+                <p class="lead text-center" style="margin: 0em;">
+                    <b> Admin ? Welcome,PLEASE::!! <br> 
+                      </b><button class="btn btn-success" data-toggle="modal" data-target=".adminModal">Enter Here</button>
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Login Section</h4>
+                </div>
+                <div class="modal-body login-box">
+                        <form action="login.php" method="post" >
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="login_btn">Login</button>
+                            
+
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal registerModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Registration Form</h4>
+            </div>
+            <div class="modal-body">
+               
+                <form action="signup.php" method="post" >
+               
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text"  name="name" class="form-control" placeholder="Enter your name here(This will be your username)" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text"  name="email" class="form-control" placeholder="Enter your email here" required>
+                    </div>                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password"  name="password" class="form-control" placeholder="Enter your password here" required>
+                    </div>
+                    
+                                                 
+                    <button type="submit" class="btn btn-primary" name="signup_btn">Register</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal adminModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Admin Section</h4>
+                </div>
+                <div class="modal-body login-box">
+                        <form action="login.php" method="post" >
+                            <div class="form-group">
+                                <label>Admin Name</label>
+                                <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="login_btn">Login</button>
+                            
+
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+
+        </div>
+    </div>
+</div>
+   
+
+<script>
+    $(document).ready(function(){
+            $("#introone").css({'display':'none'});
+            $("body").css({'background-image':"url('introfood.jpg')","background-attachment":"fixed","background-size":"cover","background-repeat":"no-repeat"});
+            $(".quotebox").fadeIn(3000);
+           $(".quotebox").fadeOut(1000);
+           $("#introone").fadeIn("fast");
+            
+            
+    });
+</script>
+
+</body>       
+</html>
+       
